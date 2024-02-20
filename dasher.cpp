@@ -18,13 +18,13 @@ int main()
   scarfyRec.x = 0;
   scarfyRec.y = 0;
   Vector2 scarfyPos;
-  scarfyPos.x = windowWidth / 2 - scarfy.width / 2;
-  scarfyPos.y = windowHeight / 2 - scarfyRec.height;
+  scarfyPos.x = windowWidth / 2 - scarfyRec.width / 2;
+  scarfyPos.y = windowHeight - scarfyRec.height;
 
-  // is the rectangle in the air?
+  // is the rectanlge in the air?
   bool isInAir{};
   // jump velocity
-  const int jumpVelocity{-15};
+  const int jumpVel{-15};
 
   int velocity{0};
 
@@ -52,7 +52,7 @@ int main()
     // jump check
     if (IsKeyPressed(KEY_SPACE) && !isInAir)
     {
-      velocity += jumpVelocity;
+      velocity += jumpVel;
     }
 
     // update the position
